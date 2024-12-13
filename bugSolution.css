@@ -1,0 +1,11 @@
+/* Correctly use calc() to avoid negative values */
+#myElement {
+  width: calc(100% - 200px);
+  /* Ensure that 100% - 200px is always positive, or add a conditional statement  if necessary */
+}
+
+/* Better approach using `max()` to ensure a positive value  */
+#myElement {
+  width: max(0, calc(100% - 200px));
+}
+/* Consider using other CSS units or approaches if the width has to be calculated depending on other factors */
